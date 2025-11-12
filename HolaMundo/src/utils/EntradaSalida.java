@@ -25,13 +25,24 @@ public class EntradaSalida {
     }
 
     /* VALIDACION DE ENTRADAS */
-    public static int validarEntero(String texto) {
+    public static int leerEntero(String texto) {
         EntradaSalida.escribirMensaje(texto);
 
         while (!sc.hasNextInt()) {
             escribirMensajeError("El valor introducido no es un número entero.\nInténtalo de nuevo: ");
             sc.next();
         }
+
         return sc.nextInt();
+    }
+
+    /* LIMPIAR BUFFER DEL SCANNER */
+    public static void limpiarBuffer() {
+        EntradaSalida.sc.nextLine();
+    }
+
+    /* SCANNER */
+    public static void cerrarScanner() {
+        sc.close();
     }
 }
