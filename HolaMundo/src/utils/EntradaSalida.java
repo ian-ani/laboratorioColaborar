@@ -25,14 +25,15 @@ public class EntradaSalida {
     }
 
     /* VALIDACION DE ENTRADAS */
-    public static int validarEntero(String texto) {
+    public static double validarEntero(String texto) {
         EntradaSalida.escribirMensaje(texto);
 
-        while (!sc.hasNextInt()) {
-            escribirMensajeError("El valor introducido no es un número entero.\nInténtalo de nuevo: crear una nueva rama comit");
+        while (!sc.hasNextDouble()) {
+            escribirMensajeError("El valor introducido no es un número entero.\nInténtalo de nuevo: ");
             sc.next();
         }
-        return sc.nextInt();
+
+        return sc.nextDouble();
     }
 
     public static String leerString(String texto) {
