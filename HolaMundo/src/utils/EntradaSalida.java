@@ -29,7 +29,7 @@ public class EntradaSalida {
         EntradaSalida.escribirMensaje(texto);
 
         while (!sc.hasNextInt()) {
-            escribirMensajeError("El valor introducido no es un número entero.\nInténtalo de nuevo: Hola mundo  ");
+            escribirMensajeError("El valor introducido no es un número entero.\nInténtalo de nuevo: Hola ");
             sc.next();
         }
 
